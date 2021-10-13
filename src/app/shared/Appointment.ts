@@ -1,5 +1,9 @@
 export class Appointment {
-    $key: string;
-    name: string;
-    email: string;
+    $idreferencia: string;
+    titulopub: string;
+    autores: string;
+    tipopub: number;
+    eventorevista: string;
+    doi: string;
+    anyopub: number;
 }

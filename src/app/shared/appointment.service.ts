@@ -7,6 +7,7 @@ import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angula
 })
 
 export class AppointmentService {
+
   bookingListRef: AngularFireList<any>;
   bookingRef: AngularFireObject<any>;
 
@@ -15,8 +16,12 @@ export class AppointmentService {
   // Create
   createBooking(apt: Appointment) {
     return this.bookingListRef.push({
-      name: apt.name,
-      email: apt.email,
+      titulopub: apt.titulopub,
+      autores: apt.autores,
+      tipopub: apt.tipopub,
+      eventorevista: apt.eventorevista,
+      doi: apt.doi,
+      anyopub: apt.anyopub
     })
   }
 
@@ -35,8 +40,12 @@ export class AppointmentService {
   // Update
   updateBooking(id, apt: Appointment) {
     return this.bookingRef.update({
-      name: apt.name,
-      email: apt.email,
+      titulopub: apt.titulopub,
+      autores: apt.autores,
+      tipopub: apt.tipopub,
+      eventorevista: apt.eventorevista,
+      doi: apt.doi,
+      anyopub: apt.anyopub,
     })
   }
 

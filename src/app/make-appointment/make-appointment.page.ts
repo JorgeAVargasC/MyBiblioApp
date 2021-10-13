@@ -18,8 +18,12 @@ export class MakeAppointmentPage implements OnInit {
 
   ngOnInit() {
     this.bookingForm = this.fb.group({
-      name: [''],
-      email: [''],
+      titulopub: [''],
+      autores: [''],
+      tipopub: [''],
+      eventorevista: [''],
+      doi: [''],
+      anyopub: ['']
     })
   }
 

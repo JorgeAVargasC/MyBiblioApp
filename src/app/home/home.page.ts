@@ -22,7 +22,7 @@ export class HomePage implements OnInit {
       this.Bookings = [];
       res.forEach(item => {
         let a = item.payload.toJSON();
-        a['$key'] = item.key;
+        a['$idreferencia'] = item.key;
         this.Bookings.push(a as Appointment);
       })
     })

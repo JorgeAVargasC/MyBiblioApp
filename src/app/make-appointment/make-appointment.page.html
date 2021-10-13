@@ -1,26 +1,51 @@
 <ion-header>
   <ion-toolbar class="ios hydrated">
-    <ion-title class="ios title-ios hydrated">Booking</ion-title>
+    <ion-title class="ios title-ios hydrated">Agregar Bibliografía</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list lines="full">
     <form [formGroup]="bookingForm" (ngSubmit)="formSubmit()">
+
       <ion-item>
-        <ion-label position="floating">Name</ion-label>
-        <ion-input formControlName="name" type="text" required></ion-input>
+        <ion-label position="floating">Título de la publicación</ion-label>
+        <ion-input formControlName="titulopub" type="text" required></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label position="floating">Email</ion-label>
-        <ion-input formControlName="email" type="text" required>
+        <ion-label position="floating">Autores</ion-label>
+        <ion-input formControlName="autores" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Tipo de publicación</ion-label>
+        <ion-input formControlName="tipopub" type="number" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Evento Revista</ion-label>
+        <ion-input formControlName="eventorevista" type="text">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">DOI</ion-label>
+        <ion-input formControlName="doi" type="text">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Año De Publicación</ion-label>
+        <ion-input formControlName="anyopub" type="number" required>
         </ion-input>
       </ion-item>
 
       <ion-row>
         <ion-col>
-          <ion-button type="submit" color="primary" shape="full" expand="block">Book Appointment</ion-button>
+          <ion-button type="submit" color="primary" shape="full" expand="block">Agregar</ion-button>
         </ion-col>
       </ion-row>
     </form>
